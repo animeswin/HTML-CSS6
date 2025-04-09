@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eef2f5;
+  }
+  
+  .form-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 40px auto;
+  }
+  
+  .campo {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .campo input {
+    width: 100%;
+    padding: 10px 10px 10px 30px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+  }
+  
+  .campo label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .usuario::before,
+  .senha::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 35px;
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    opacity: 0.6;
+  }
+  
+  .usuario::before {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/1077/1077114.png');
+  }
+  
+  .senha::before {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/3064/3064155.png');
+  }
+  
+  .botoes {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  button {
+    flex: 1;
+    padding: 10px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4a90e2;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: left 0.4s;
+  }
+  
+  button:hover::after {
+    left: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .form-container {
+      max-width: 90%;
+      margin: 20px auto;
+    }
+  
+    .botoes {
+      flex-direction: column;
+    }
+  
+    .botoes button {
+      margin: 5px 0;
+    }
+  }
